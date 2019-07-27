@@ -1,0 +1,10 @@
+outfit "Primitive Jump Drive"
+	category "Systems"
+	cost 1000000
+	thumbnail "outfit/old jump drive"
+	"mass" 30
+	"outfit space" -30
+	"jump speed" .2
+	"jump fuel" 350
+	"jump drive" 1
+	description "This ancient precursor to the modern Jump Drive is thousands of years old, designed by an alien race long gone from this universe. It's age brings with it inefficiency in almost every aspect, except for the more simplistic design, which holds the opportunity to be reverse-engineered."
