@@ -6,7 +6,7 @@ mission "Aquire Primitive JD"
 
 		
 	landing
-	npc kill
+	npc board
 		government "Derelict"
 		personality mute derelict staying
 		system "Sagittarius A*"
@@ -40,8 +40,11 @@ mission "Aquire Primitive JD"
 					decline
 			
 			label hail
-			`You hail the ship, but there is no response. Boarding it is the best possible option.`
-			`"The Remnant would love to get their hands on such unique technology" you think, "They'd probably pay millions for it."` 
+			`You hail the ship, but there is no response. Boarding it is the best possible option.` 
 				accept
+	
 	on complete
-		dialog "You should take this ship to the Remnant, They'll know what to do with it."
+		conversation 
+			`Surpisingly, as blast through the airlock, you are only met with freshly recycled air, not the vacuum you prepared for. The ship has some form of in-built life support, which explains how it stayed mostly intact in orbit around the black hole. What concerns you is how there is no evidence of any crew anywhere in the ship, just a thick layer of dust over all the floors and controls. Once you reach the engine room, you find an unfamiliar sight, an odd, red Jump Drive. This seems very old, maybe you should take it to someone with expertise in salvaging alien artifacts. `
+				accept
+				
