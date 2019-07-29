@@ -17,6 +17,7 @@ ship "Pathfinder"
 		"weapon capacity" 2
 		"engine capacity" 80
 		"energy capacity" 5000
+		"automaton" 1
 	outfits
 			"Broken Ramscoop" 2
 			"White Hole Generator (Medium)"
@@ -24,6 +25,7 @@ ship "Pathfinder"
 			"Microwave Steering (Small)"
 			"Life Support"
 			"Primitive Jump Drive"
+			
 	engine 20.5 49
 	engine -21 48.5
 	gun 22.5 -54
