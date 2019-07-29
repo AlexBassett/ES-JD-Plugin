@@ -1,12 +1,12 @@
 ship "Pathfinder"
 	sprite "ship/Pathfinder"
-	thumbnail "thumbnail/Pathfinder Thumb"
+	thumbnail "thumbnail/Pathfinder"
 	attributes
 		category "Transport"
 		"cost" 5000000
 		"shields" 
 		"hull" 50000
-		"required crew" 1
+		"required crew" 0
 		"bunks" 50
 		"mass" 300
 		"drag" 5.0
@@ -18,7 +18,7 @@ ship "Pathfinder"
 		"engine capacity" 80
 		"energy capacity" 5000
 	outfits
-			"Broken Ramscooop" 2
+			"Broken Ramscoop" 2
 			"White Hole Generator (Medium)"
 			"Microwave Thruster (Small)"
 			"Microwave Steering (Small)"
