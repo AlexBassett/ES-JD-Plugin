@@ -1,0 +1,68 @@
+outfit "Primitive Jump Drive"
+	category "Systems"
+	cost 1000000
+	thumbnail "outfit/old jump drive"
+	"mass" 30
+	"outfit space" -30
+	"jump speed" .2
+	"jump fuel" 350
+	"jump drive" 1
+	description "This ancient precursor to the modern Jump Drive is thousands of years old, designed by an alien race long gone from this universe. Its age brings with it inefficiency in almost every aspect, except for the more simplistic design, which holds the opportunity to be reverse-engineered."
+	
+outfit "White Hole Generator (Medium)"
+	category "Power"
+	cost 1000000
+	thumbnail "outfit/unknown"
+	"mass" 75
+	"outfit space" -75
+	"energy generation" 20
+	"heat generation" 10
+	description "This peculiar generator appears to utilize the same anomalous materials which power the Jump Drive, but in a different form, to seemingly summon energy from nowhere. This device is significantly more complicated than the Jump Drive, and so is completely impossible to replicate"
+	
+outfit "Microwave Thruster (Small)"
+	category "Engines"
+	cost 1000000
+	thumbnail "outfit/unknown"
+	"mass" 29
+	"outfit space" -29
+	"engine capacity" -29
+	"thrust" 12
+	"thrusting energy" 1.5
+	"thrusting heat" 1.2
+	"flare sprite" "effect/remnant flare/small"
+		"frame rate" 5
+	"flare sound" "plasma tiny"
+	description "These small thrusters use microwaves as a means of propulsion, producing significantly less heat than others like them." 
+
+outfit "Microwave Steering (Small)"
+	category "Engines"
+	cost 1000000
+	thumbnail "outfit/unknown"
+	"mass" 30
+	"outfit space" -30
+	"engine capacity" -30
+	"turn" 580
+	"turning energy" 1.0
+	"turning heat" 1.0
+	
+outfit "Life Support"
+	category "Systems"
+	cost 1000000
+	thumbnail "outfit/unknown"
+	"mass" 50
+	"outfit space" -50
+	"hull repair rate" 0.3
+	"hull energy" 0.5
+	"cooling" 50
+	description "An autonomous system to maintain the condition of it's ship, repairing breaches in the hull and ventilating heat sources"
+	
+outfit "Broken Ramscoop"
+	category "Systems"
+	cost 0
+	thumbnail "outfit/unknown"
+	"mass" 15
+	"outfit space" -15
+	"ramscoop" 0
+	description "This used to be an impressive fuel collection device, but due to a design flaw, it broke after just a few hyperspace jumps, rendering it useless."
+	
+	
