@@ -1,0 +1,37 @@
+ship "Pathfinder"
+	sprite "ship/Pathfinder"
+	thumbnail "thumbnail/Pathfinder"
+	attributes
+		category "Transport"
+		"cost" 5000000
+		"shields" 
+		"hull" 50000
+		"required crew" 0
+		"bunks" 50
+		"mass" 300
+		"drag" 5.0
+		"heat dissipation" .7
+		"fuel capacity" 1050
+		"cargo space" 25
+		"outfit space" 295
+		"weapon capacity" 2
+		"engine capacity" 80
+		"energy capacity" 5000
+		"automaton" 1
+	outfits
+			"Broken Ramscoop" 2
+			"White Hole Generator (Medium)"
+			"Microwave Thruster (Small)"
+			"Microwave Steering (Small)"
+			"Life Support"
+			"Primitive Jump Drive"
+			
+	engine 20.5 49
+	engine -21 48.5
+	gun 22.5 -54
+	gun -21.5 -53.5
+	explode "tiny explosion" 10
+	explode "small explosion" 25
+	explode "medium explosion" 25
+	explode "large explosion" 10
+	"final explode" "final explosion medium"
