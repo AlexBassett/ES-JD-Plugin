@@ -1,3 +1,0 @@
-government "Derelict"
-	"player reputation" -1000
-	swizzle 0
