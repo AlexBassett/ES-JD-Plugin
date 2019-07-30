@@ -1,5 +1,0 @@
-outfitter "Primitive JD"
-	"Primitive Jump Drive"
-planet Viminal
-	outfitter "Primitive JD"
-	shipyard "Pathfinder"
