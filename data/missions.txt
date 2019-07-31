@@ -8,10 +8,10 @@ mission "Aquire Primitive JD"
 		personality mute derelict staying
 		system "Sagittarius A*"
 		ship "Pathfinder" "Pilgrim of the Stars"
-		dialog "Surpisingly, as you blast through the airlock, you are only met with freshly recycled air, not the vacuum you prepared for. The ship has some form of in-built life support, which explains how it stayed mostly intact in orbit around the black hole. What concerns you is how there is no evidence of any crew anywhere in the ship, just a thick layer of dust over all the floors and controls. Once you reach the engine room, you find an unfamiliar sight, an odd, red Jump Drive. This seems very old, maybe you should take it to someone with expertise in salvaging alien artifacts. "
+		dialog "As you blast through the airlock, you are met with freshly recycled air, not the vacuum you prepared for. There is no evidence of any crew anywhere in the ship, just a thick layer of dust over all the floors and controls. Once you reach the engine room, you find an odd, red Jump Drive. This seems very old, maybe you should take it to someone with expertise in salvaging alien artifacts."
 	on enter "Sagittarius A*"
 		conversation
-			`As you enter the system, something unusual stands out to you, there is a strangely shaped object in slow orbit around the black hole. This is exceedingly rare, as very few things survive the crushing gravity, you feel you should probably find out what it is. `
+			`As you enter the system, something unusual stands out to you. There is a strangely shaped object in slow orbit around the black hole. This is exceedingly rare, as very few things survive the crushing gravity. You feel you should probably find out what it is. `
 			choice
 				`(Scan it)`
 					goto scan
@@ -29,8 +29,8 @@ mission "Aquire Primitive JD"
 					decline
 			label approach
 			`As you approach it, you notice the unmistakable glint of a starship hull. Covered in layers of caked-on grime, this ship looks like its been still for hundreds of years.`
-			`The design is unfamiliar to you, and looks like nothing you've ever seen in Human or Alien space.`
-			`You are unsure how to proceed with this, the ship looks abandoned.`
+			`The design is unfamiliar to you, and looks like nothing you've ever seen in human or alien space.`
+			`The ship looks abandoned.`
 			choice
 				`(Hail the ship)`
 					goto hail
@@ -44,3 +44,67 @@ mission "Aquire Primitive JD"
 		set "Aquired Pathfinder"
 			
 			
+mission "Remnant Primitive JD 1"
+	landing
+	to offer
+		has "Remnant: Tech Retrieval: done"
+		has "Aquired Pathfinder"
+		has "Aquire Primitive JD: done"
+	source 
+		government "Remnant"
+	invisible
+	on offer
+		conversation	
+			` As the <ship> touches down, you notice a crowd of Remnant waiting beside the landing pad. A exited looking scientist greets you as you exit your ship, blocking your path to the spaceport. "What have you brought us today <first>?" he sings. "I have never seen any ship of the sort before."`
+			choice
+				`"I have no idea, I found it in the galactic core."`
+					goto core
+				`"A strange jump drive, it looks different from any I've seen."`
+					goto drive
+				`"None of your business."`
+					decline
+			label core
+			`"May we have a look at it's outfits? Very rarely do we get our hands of technology of this age." You can see the scientist is practically bouncing with excitement.`
+			`By now the crowd of Remnant is growing, with many more scientists eyeing the ship with fervor.`
+			choice
+				`"Yes"`
+					goto yes
+				`"No"`
+					decline
+				`"Yes, but why is this so important?"`
+					goto old
+			
+			label yes
+			`You open up the Pathfinder and lead the scientist in, he comments when you reach the conrol room. "The ship appears to be made to house a crew, yet the navigation and systems are controlled by an AI." You lead him to the engine room next, where the red Jump Drive lies. "This is truly unusual," he says. "All jump drives are uniform in design, yet this one is not. This must be brought to the attention of the prefects at once!" The scientist runs out in a hurry`
+			choice
+			`(Follow the scientist)`
+				goto prefects
+			`(Leave)`
+				decline
+			label drive
+			`"This cannot be," the scientist says. "Jump Drives have had the same design for as long as humanity has known of them. Either someone reverse engineered one, or this drive is of exceptional age. We must make this known to the prefects at once if it is true!" The scientist turns around and runs for the nearest government building.`
+			choice
+			`(Follow the scientist)`
+				goto prefects
+			`(Leave)`
+				decline
+			label old
+			`The scientists face lights up, exited to explain. "Very rarely, on the outskirts of known space, our explorers find odd husks of ships, derelicts, you might call them. These ships never follow any conceivable structure or guideline of design, the only common feature is that none are ever intact, and all are devoid of crew. This ship is intact, which is why it is so intriguing. May we look at the ship now?"` 
+				goto yes
+			label prefects
+			`You push through the crowd to follow the scientist. After a long chase, you end up at a looming government building, constructed from the same composite material the ships are made of. The scientist, now huffing for air, pricks his finger on a sensor, and enters the building, beckoning you to follow.`
+			`He silently leads you to a chamber where multiple Remnant sit, you recognize Taely, the prefect who asked you to retrieve technology, looking uncomfortable, amid the rest of the group. The scientist stands on a small podium, chanting, "I am here today with Captain <first> <last> to address the assembly on urgent matters." An aged looking Remnant stands from the assembly, addressing the scientist. "What have you brought us today Týr? Another ghost story?" The scientist, Týr, states "Not another story, Dominic, something much more important. Captain <last> has found what I have been researching for 10 years, an intact Derelict. Not only that, it appears to contain a Jump Drive of tremendous age"`
+			`That statement seems to shake the assembly, leaving all members looking surprised. Dominic, who looks to be the assembly's leader, turns to address you. "Is this true, did you find a Derelict?" he asks in a quiet tone.`
+				goto true
+			label true
+			`You pause, unsure of what to say. The eyes of every prefect reside on you now. Dominic repeats his question again, more sharply. "Well, did you find one? Or is Týr wasting our time again?"`
+			choice
+			`"Yes, I did find one"`
+			goto find
+			label find
+			`"Well..." Dominic says. "If this is true, we are seizing this drive for the good of the Remnant, you will be compensated generously, but such an opprotunity leaves no choice in the matter. Captain <first>, please return to the spaceport, where you will aid our engineers in removing this drive." He makes a gesture indicating for you to leave.`
+			`You are escorted out of the chamber by two armed guards, Týr remains behind. As you arrive back at the spaceport, you help workers carry out the drive, despite having little choice in it. A few minutes later, a 5,000,000 credit chip is physically delivered alongside a message. "I am sorry about how Dominic dealt with that situation, hopefully the credits will make up for it. I will follow up if anything comes of this drive, but the assembly is holding me for the forseeable future. Týr."`
+				accept
+	on complete
+		outfit "Primitive Jump Drive" -1
+		payment 5000000
